@@ -1,0 +1,155 @@
+.gridBody {
+    display: grid;
+    grid-template-columns: 9% 91%;
+    grid-template-rows: 9% 91% auto;
+    grid-template-areas: 
+    "logo h1"
+    "nav main"
+    "foot foot";
+}
+
+/*Grid pos*/
+.imagelink {
+    grid-area: logo;
+}
+h1 {
+    grid-area: h1;
+}
+header {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: foot;
+}
+
+/*body style*/
+body {
+    margin: 0;
+    width: 100%;
+    font-family: Candara, serif;
+    line-height: 1.4rem;
+    background-image: url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-blend-mode: overlay;
+    background-color: rgb(232, 232, 232);
+    font-weight: 600;
+}
+
+.imagelink {
+    background-color: #e60012;
+}
+
+.twoCol {
+    width: 100%;
+    margin: auto;
+    -webkit-column-width: 50%;
+    column-width: 50%;
+    column-count: 2;
+    column-gap: 2rem;
+}
+.twoCol p {
+    padding: 0;
+}
+main {
+    margin: 2rem;
+    font-size: 110%;
+    text-shadow: 0px 0px 10px white;
+}
+
+header{
+    background-color: #e60012;
+    padding: 1rem;
+}
+nav ul{
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li{
+
+
+    margin-bottom: 1rem;
+}
+nav ul li.btnRed a{
+    background-image: url("../img/buttonRed.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-shadow: 3px 3px 3px black;
+}
+nav ul li.btnRed a:hover,  nav ul li.btnRed a.active{
+    background-image: url("../img/buttonBlue.png");
+}
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    font-size: 130%;
+    color: white;
+    width: 100%;
+    min-height: 3rem;
+    padding-top: 1.5rem;
+    font-weight: bold;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #e60012;
+    color: white;
+    margin: 0;
+    padding-left: 1rem;
+    justify-content: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+article img.leftMain {
+    float: left;
+    shape-outside: polygon(390px 220px, 370px 112px, 390px 170px);
+    shape-margin: 2rem;
+}
+article {
+    overflow: hidden;
+}
+
+article img.left {
+    float: left;
+    margin-right: 2rem;
+}
+article img.right {
+    float: right;
+    margin-left: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    padding: 0 1rem;
+    height: 5rem;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div img{
+    max-height: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+
+    .twoCol {
+        column-count: 1;
+        column-width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+}
